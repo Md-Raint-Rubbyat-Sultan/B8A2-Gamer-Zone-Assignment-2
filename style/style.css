@@ -32,14 +32,159 @@
 .btn-prime {
     color: #fff;
     background-color: var(--linearColor);
-    padding: 21px 40px;
+    padding: 18px 35px;
+    border: none;
     border-radius: 48px;
+    cursor: pointer;
+}
+
+/* main style */
+main {
+    max-width: 1920px;
 }
 
 /* header style */
+/* nav bar style */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 200px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo>h1 {
+    font-size: 2.8rem;
+    color: var(--headText);
+}
+
+.logo>h1>span {
+    color: var(--linearColor);
+}
+
+.navBar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.navBar ul>li {
+    list-style: none;
+}
+
+.navBar ul>li>a {
+    text-decoration: none;
+    color: var(--primeText);
+}
+
+.follow-list {
+    padding: 18px 24px;
+    background-color: rgba(11, 2, 35, 0.10);
+    border-radius: 8px;
+}
+
+.you-icon {
+    color: #F61C0D;
+    margin: 0 15px;
+}
+
+/* banner section */
+.banner {
+    background-image: url('../images/Group 14.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 68px;
+    padding: 0 200px;
+}
+
+.banner-text,
+.banner-img {
+    flex: 1;
+}
+
+.play-link {
+    color: var(--headText);
+    font-size: 3rem;
+}
+
+.goat {
+    font-size: 5.9rem;
+}
+
+.banner-text ul>li {
+    list-style: none;
+    color: var(--primeText);
+    margin: 17px;
+}
+
+.banner-text-btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.go-btn {
+    color: #fff;
+    background-color: #4EC5F7;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 48px;
+    cursor: pointer;
+}
+
+.banner-img img {
+    width: 100%;
+    height: 100%;
+}
 
 
-/* main style */
-main{
-    max-width: 1920px;
+/* media query */
+@media screen and (max-width: 576px) {
+
+    .navBar,
+    .navBar ul,
+    .banner {
+        flex-direction: column;
+    }
+
+    .navBar {
+        padding: 38px 10px;
+    }
+
+    .navBar ul {
+        margin-top: 24px;
+    }
+
+    .banner {
+        background-image: none;
+        padding: 0 30px;
+        gap: 10px;
+    }
+
+    .banner-text {
+        background-image: url('../images/Group 14.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 30px;
+    }
+
+    .banner-img {
+        order: 1;
+    }
+
+    .banner-text {
+        order: 2;
+    }
 }
