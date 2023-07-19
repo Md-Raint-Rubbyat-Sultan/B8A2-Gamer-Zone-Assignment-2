@@ -38,11 +38,6 @@
     cursor: pointer;
 }
 
-/* main style */
-main {
-    max-width: 1920px;
-}
-
 /* header style */
 /* nav bar style */
 .navBar {
@@ -82,6 +77,7 @@ main {
 .navBar ul>li>a {
     text-decoration: none;
     color: var(--primeText);
+    font-weight: 500;
 }
 
 .follow-list {
@@ -115,16 +111,17 @@ main {
 
 .play-link {
     color: var(--headText);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .goat {
-    font-size: 5.9rem;
+    font-size: 4.5rem;
 }
 
 .banner-text ul>li {
     list-style: none;
     color: var(--primeText);
+    font-weight: 500;
     margin: 17px;
 }
 
@@ -149,8 +146,45 @@ main {
     height: 100%;
 }
 
+/* main style */
+main {
+    max-width: 1920px;
+}
+
+/* online section */
+.online-games {
+    margin: 120px 200px;
+}
+
+.online-games h1 {
+    font-size: 2.5rem;
+}
+
+.online-games-para {
+    color: var(--primeText);
+    margin: 20px 0 30px;
+}
+
+/* card section */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.card>img {
+    width: 100%;
+}
+
+.card>p {
+    color: var(--primeText);
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 10px;
+}
 
 /* media query */
+/* for small device */
 @media screen and (max-width: 576px) {
 
     .navBar,
@@ -186,5 +220,58 @@ main {
 
     .banner-text {
         order: 2;
+    }
+
+    .online-games {
+        margin: 80px 30px;
+    }
+    .card-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* for tablet */
+@media screen and (max-width: 1024px) and (min-width: 576px) {
+
+    .navBar,
+    .navBar ul,
+    .banner {
+        flex-direction: column;
+    }
+
+    .navBar {
+        padding: 38px 10px;
+    }
+
+    .navBar ul {
+        margin-top: 24px;
+    }
+
+    .banner {
+        background-image: none;
+        padding: 0 50px;
+        gap: 10px;
+    }
+
+    .banner-text {
+        background-image: url('../images/Group 14.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 100px;
+    }
+
+    .banner-img {
+        order: 1;
+    }
+
+    .banner-text {
+        order: 2;
+    }
+
+    .online-games {
+        margin: 100px 50px;
+    }
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
