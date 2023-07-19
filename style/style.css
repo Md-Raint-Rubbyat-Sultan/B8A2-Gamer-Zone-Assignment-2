@@ -375,7 +375,7 @@ main {
     .navBar,
     .navBar ul,
     .banner,
-    .online-game-container {
+    .online-game-container{
         flex-direction: column;
     }
 
@@ -436,8 +436,6 @@ main {
     }
 
     .try-games {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
 
@@ -456,6 +454,7 @@ main {
 
     .foot-address>ul {
         grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 
     .policy>ul {
