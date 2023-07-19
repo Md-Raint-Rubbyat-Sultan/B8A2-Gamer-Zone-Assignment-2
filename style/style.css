@@ -185,8 +185,50 @@ main {
     gap: 24px;
 }
 
-.card>img {
+.card>.card-img>img {
     width: 100%;
+}
+
+.card-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img:hover .watch-now {
+    display: block;
+}
+
+.watch-now {
+    display: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 98.7%;
+    height: 98%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--linearColor);
+    border-radius: 12px;
+}
+
+.watch-now>i {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.watch-now>p {
+    color: var(--linearColor);
+    font-weight: 600;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
 }
 
 .card>p {
